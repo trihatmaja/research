@@ -1,9 +1,7 @@
 package main
 
 import (
-"os"
-//"fmt"
-//"io/ioutil"
+	"os"
 )
 
 func main() {
@@ -14,6 +12,8 @@ func main() {
 	}
 	defer f.Close()
 	_, err = f.WriteString("17=0\n")
-	if err != nil{panic(err)}
+	if err != nil {
+		panic(err)
+	}
 	f.Sync()
 }
